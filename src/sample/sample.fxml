@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+      <AnchorPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000a12;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="167.0" layoutX="18.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/car3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="198.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/car1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="410.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/car2.png" />
+               </image>
+            </ImageView>
+            <JFXButton onAction="#openServerWindow" buttonType="RAISED" layoutX="230.0" layoutY="187.0" prefHeight="45.0" prefWidth="175.0" style="-fx-background-color: #263238;" text="SERVER" textFill="#f8f8f8">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#d1d0da" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#openClientWindow" buttonType="RAISED" layoutX="233.0" layoutY="258.0" prefHeight="46.0" prefWidth="170.0" ripplerFill="#4408c7" style="-fx-background-color: #ffffff;" text="CLIENT" textFill="#263238">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#showAvailablePort" buttonType="RAISED" layoutX="220.0" layoutY="332.0" prefHeight="44.0" prefWidth="195.0" ripplerFill="#0fd98d" style="-fx-background-color: #1475d7 #1475d7;" text="SHOW AVAILABLE PORT" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="portLabel" layoutX="230.0" layoutY="387.0" textFill="#00c853" disable="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+

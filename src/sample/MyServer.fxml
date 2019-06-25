@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="513.0" prefWidth="600.0" style="-fx-background-color: #000a12;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MyServer">
+   <children>
+      <JFXButton fx:id="startServer" buttonType="RAISED" layoutX="370.0" layoutY="85.0" prefHeight="40.0" prefWidth="71.0" style="-fx-background-color: #00c853;" text="START" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="95.0" layoutY="35.0" text="Enter server port number to configure the server e.g. 5066" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="portNumberField" labelFloat="true" layoutX="187.0" layoutY="85.0" prefHeight="40.0" prefWidth="158.0" promptText="Port Number" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXRadioButton fx:id="serverState" disable="true" layoutX="500.0" layoutY="5.0" text="Server State" textFill="WHITE" wrapText="true" />
+      <JFXTextArea fx:id="serverMessageBoard" editable="false" layoutX="56.0" layoutY="299.0" prefHeight="186.0" prefWidth="517.0" promptText="Chat History" style="-fx-background-color: #ffffff; -fx-padding: 8.0; -fx-background-image: url(https://i.pinimg.com/originals/79/5c/ab/795cabc4647f73b365e2e6eabd0f34dc.png);" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextArea>
+      <JFXButton fx:id="requestToyName" buttonType="RAISED" disable="true" layoutX="82.0" layoutY="141.0" prefHeight="40.0" prefWidth="212.0" style="-fx-background-color: #1475d7 #1475d7;" text="REQUEST TOY IDENTIFICATION" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" disable="true" layoutX="327.0" layoutY="141.0" prefHeight="40.0" prefWidth="218.0" style="-fx-background-color: #1475d7 #1475d7;" text="REQUEST TOY INFORMATION" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="requestManufacturer" buttonType="RAISED" disable="true" layoutX="82.0" layoutY="250.0" prefHeight="40.0" prefWidth="274.0" style="-fx-background-color: #1475d7 #1475d7;" text="REQUEST TOY MANUFACTURER DETAILS" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="requestThankYouMessage" buttonType="RAISED" disable="true" layoutX="82.0" layoutY="195.0" prefHeight="40.0" prefWidth="237.0" style="-fx-background-color: #1475d7 #1475d7;" text="REQUEST THANK YOU MESSAGE" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
