@@ -30,9 +30,9 @@
             <Font size="14.0" />
          </font>
       </JFXButton>
-      <JFXTextArea fx:id="messageBoard" layoutX="82.0" layoutY="218.0" promptText="Chat History" style="-fx-background-color: #ffffff; -fx-padding: 8.0; -fx-background-image: url(https://i.pinimg.com/originals/79/5c/ab/795cabc4647f73b365e2e6eabd0f34dc.png);" wrapText="true">
+      <JFXTextArea fx:id="messageBoard" editable="false" layoutX="82.0" layoutY="218.0" prefHeight="188.0" prefWidth="556.0" promptText="Chat History" style="-fx-background-color: #ffffff; -fx-padding: 8.0; -fx-background-image: url(https://i.pinimg.com/originals/79/5c/ab/795cabc4647f73b365e2e6eabd0f34dc.png);" wrapText="true">
          <font>
-            <Font size="14.0" />
+            <Font name="Book Antiqua" size="16.0" />
          </font></JFXTextArea>
       <JFXTextField fx:id="toyField" focusColor="#00c853" labelFloat="true" layoutX="85.0" layoutY="154.0" prefHeight="40.0" prefWidth="351.0" promptText="Send Message" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
       <JFXButton fx:id="sendMessage" buttonType="RAISED" layoutX="439.0" layoutY="154.0" prefHeight="40.0" prefWidth="103.0" style="-fx-background-color: #1475d7;" text="SEND" textFill="WHITE">
@@ -41,5 +41,10 @@
          </font>
       </JFXButton>
       <JFXRadioButton fx:id="clientStateRadioButton" disable="true" layoutX="549.0" layoutY="6.0" text="Client State" textFill="WHITE" />
+      <JFXButton id="btnOpenForm" buttonType="RAISED" layoutX="545.0" layoutY="158.0" onAction="#openForm" ripplerFill="WHITE" text="Open Form" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

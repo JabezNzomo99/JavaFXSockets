@@ -31,7 +31,8 @@ public class Controller {
                     root = FXMLLoader.load(getClass().getResource("MyServer.fxml"));
                     Stage stage = new Stage();
                     stage.setTitle("Server Window");
-                    stage.setScene(new Scene(root,700,600));
+                    stage.setScene(new Scene(root,650,500));
+                    stage.setResizable(false);
                     stage.show();
                 }catch (IOException exception){
                     exception.printStackTrace();
@@ -47,7 +48,7 @@ public class Controller {
             root = FXMLLoader.load(getClass().getResource("MyClient.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Client Window");
-            stage.setScene(new Scene(root,700,500));
+            stage.setScene(new Scene(root,700,450));
             stage.setResizable(false);
             stage.show();
         }catch (IOException exception){

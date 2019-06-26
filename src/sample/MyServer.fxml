@@ -33,7 +33,7 @@
          <font>
             <Font name="Calibri Bold" size="15.0" />
          </font></JFXButton>
-      <JFXButton buttonType="RAISED" disable="true" layoutX="327.0" layoutY="141.0" prefHeight="40.0" prefWidth="218.0" style="-fx-background-color: #1475d7 #1475d7;" text="REQUEST TOY INFORMATION" textFill="WHITE">
+      <JFXButton fx:id="requestToyInformation" buttonType="RAISED" disable="true" layoutX="327.0" layoutY="141.0" prefHeight="40.0" prefWidth="218.0" style="-fx-background-color: #1475d7 #1475d7;" text="REQUEST TOY INFORMATION" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="15.0" />
          </font>
@@ -44,6 +44,11 @@
          </font>
       </JFXButton>
       <JFXButton fx:id="requestThankYouMessage" buttonType="RAISED" disable="true" layoutX="82.0" layoutY="195.0" prefHeight="40.0" prefWidth="237.0" style="-fx-background-color: #1475d7 #1475d7;" text="REQUEST THANK YOU MESSAGE" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="requestAllToyInformation" buttonType="RAISED" disable="true" layoutX="327.0" layoutY="196.0" prefHeight="40.0" prefWidth="218.0" style="-fx-background-color: #1475d7 #1475d7;" text="REQUEST ALL INFO" textFill="WHITE">
          <font>
             <Font name="Calibri Bold" size="15.0" />
          </font>

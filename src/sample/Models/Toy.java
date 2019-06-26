@@ -9,6 +9,16 @@ public class Toy implements Serializable {
     private int Price;
     private String Dom;
     private String BatchNumber;
+
+    public String getCustomMessage() {
+        return customMessage;
+    }
+
+    public void setCustomMessage(String customMessage) {
+        this.customMessage = customMessage;
+    }
+
+    private String customMessage;
     private ToyManfacturer toyManfacturer;
 
     public String getCode() {

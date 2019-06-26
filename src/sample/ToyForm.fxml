@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="460.0" prefWidth="591.0" style="-fx-background-color: #000a12;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ToyFormController">
+   <children>
+      <Label layoutX="240.0" layoutY="22.0" text="TOY FORM" textFill="#00c853">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="57.0" text="TOY DETAILS" textFill="#1475d7">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="textFieldToyName" focusColor="#1475d7" labelFloat="true" layoutX="45.0" layoutY="99.0" prefHeight="35.0" prefWidth="171.0" promptText="Enter toy name" style="-fx-background-color: #ffffff;" unFocusColor="#00c853">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textFieldToyCode" focusColor="#1475d7" labelFloat="true" layoutX="45.0" layoutY="159.0" prefHeight="35.0" prefWidth="171.0" promptText="Enter toy code" style="-fx-background-color: #ffffff;" unFocusColor="#00c853">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textFieldToyDescription" focusColor="#1475d7" labelFloat="true" layoutX="45.0" layoutY="224.0" prefHeight="35.0" prefWidth="171.0" promptText="Enter toy description" style="-fx-background-color: #ffffff;" unFocusColor="#00c853">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textFieldToyPrice" focusColor="#1475d7" labelFloat="true" layoutX="45.0" layoutY="287.0" prefHeight="35.0" prefWidth="171.0" promptText="Enter toy price" style="-fx-background-color: #ffffff;" unFocusColor="#00c853">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="datePicker" defaultColor="#00c853" layoutX="45.0" layoutY="344.0" prefHeight="35.0" prefWidth="212.0" promptText="Date of Manufacture" style="-fx-background-color: #ffffff;" />
+      <Label layoutX="373.0" layoutY="57.0" text="MANUFACTURER DETAILS" textFill="#1475d7">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="textFieldManufacturerName" focusColor="#1475d7" labelFloat="true" layoutX="373.0" layoutY="99.0" prefHeight="35.0" prefWidth="171.0" promptText="Enter company name" style="-fx-background-color: #ffffff;" unFocusColor="#00c853">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textFieldManufacturerStreetAddress" focusColor="#1475d7" labelFloat="true" layoutX="373.0" layoutY="159.0" prefHeight="35.0" prefWidth="171.0" promptText="Enter street address" style="-fx-background-color: #ffffff;" unFocusColor="#00c853">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textFieldManufacturerZipCode" focusColor="#1475d7" labelFloat="true" layoutX="373.0" layoutY="224.0" prefHeight="35.0" prefWidth="171.0" promptText="Enter zip code" style="-fx-background-color: #ffffff;" unFocusColor="#00c853">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textFieldManufacturerCountry" focusColor="#1475d7" labelFloat="true" layoutX="373.0" layoutY="287.0" prefHeight="35.0" prefWidth="171.0" promptText="Enter country" style="-fx-background-color: #ffffff;" unFocusColor="#00c853">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSubmitToy" layoutX="217.0" layoutY="404.0" prefHeight="39.0" prefWidth="171.0" style="-fx-background-color: #00c853;" text="SUBMIT" textFill="#000a12">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

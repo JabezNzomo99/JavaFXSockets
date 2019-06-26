@@ -6,16 +6,21 @@ import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import sample.Client.Client;
 import sample.Models.Constants;
 import sample.Models.Message;
 import sample.Models.Toy;
 
 import java.io.IOException;
+import java.lang.annotation.Target;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.UUID;
@@ -43,6 +48,7 @@ public class MyClientController implements Initializable {
     @FXML
     public JFXRadioButton clientStateRadioButton;
 
+
     private Client client;
 
     public void connectToServer(ActionEvent actionEvent){
@@ -62,7 +68,7 @@ public class MyClientController implements Initializable {
         if(!toyField.getText().isEmpty()){
             String message = toyField.getText().trim();
             Toy clientToy = new Toy();
-            clientToy.setName(message);
+            clientToy.setCustomMessage(message);
 
             if (message.contains("Thank you") || message.contains("Thanks")) {
                 UUID uuid = UUID.randomUUID();
@@ -71,7 +77,7 @@ public class MyClientController implements Initializable {
 
             }
             try{
-                messageBoard.appendText("Client : "+ message +"\n");
+                messageBoard.appendText("|"+Util.Companion.getCurrentDateTime()+"| "+"Client : "+ message +"\n");
                 client.sendToy(clientToy);
                 toyField.clear();
             }catch (IOException exception){
@@ -91,12 +97,27 @@ public class MyClientController implements Initializable {
     }
 
     public void postMessage(Message message){
-        if(message.getMessageCode() == Constants.WELCOME){
-            clientStateRadioButton.setSelected(true);
-            clientStateRadioButton.setSelectedColor(new Color(0,255,0,1));
-            clientStateRadioButton.setText("Connected");
-        }
+        messageBoard.appendText("|"+Util.Companion.getCurrentDateTime()+"| "+message.getMessage()+"\n");
+    }
 
-        messageBoard.appendText(message.getMessage()+"\n");
+    @FXML
+    public void openForm(){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ToyForm.fxml"));
+        try {
+            Parent root= fxmlLoader.load();
+            ToyFormController toyFormController = fxmlLoader.<ToyFormController>getController();
+            toyFormController.setClient(client);
+            Stage stage = new Stage();
+            stage.setTitle("Toy Form");
+            stage.setScene(new Scene(root,600,450));
+            stage.setResizable(false);
+            stage.show();
+        }catch (IOException exception){
+            exception.printStackTrace();
+        }
+    }
+
+    public void printToyObject(Toy toyObject){
+        messageBoard.appendText("|"+Util.Companion.getCurrentDateTime()+"|"+" Client : "+Util.Companion.printToyObject(toyObject)+"\n");
     }
 }

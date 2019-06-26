@@ -58,4 +58,11 @@ public class Client {
         System.out.println("Client Sending ......:"+ clientToy.getName());
         objectOutputStream.writeObject(clientToy);
     }
+
+    public void sendToyForm(Toy clientToy) throws IOException{
+        myClientController.printToyObject(clientToy);
+        System.out.println("Client Sending ......:"+ clientToy.getName());
+        objectOutputStream.writeObject(clientToy);
+
+    }
 }

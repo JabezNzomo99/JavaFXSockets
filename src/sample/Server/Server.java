@@ -79,6 +79,35 @@ public class Server {
         }
     }
 
+    public void sendWelcomeMessage() throws IOException{
+        if(isConnected){
+            message = new Message();
+            message.setMessageCode(Constants.WELCOME);
+            message.setMessage(Constants.WELCOME_MESSAGE);
+            objectOutputStream.writeObject(message);
+        }
+
+
+    }
+
+    public void requestToyInformation() throws IOException{
+        if(isConnected){
+            message = new Message();
+            message.setMessageCode(Constants.B);
+            message.setMessage(Constants.MESSAGE_B);
+            objectOutputStream.writeObject(message);
+        }
+    }
+
+    public void requestAllToyInformation() throws IOException {
+        if(isConnected){
+            message = new Message();
+            message.setMessageCode(Constants.E);
+            message.setMessage(Constants.MESSAGE_E);
+            objectOutputStream.writeObject(message);
+        }
+    }
+
     private class ClientTask implements Runnable {
         private final Socket clientSocket;
 
@@ -90,6 +119,8 @@ public class Server {
 
                 inputStream = clientSocket.getInputStream();
                 objectInputStream = new ObjectInputStream(inputStream);
+
+                sendWelcomeMessage();
             }catch (IOException e){
                 e.printStackTrace();
             }
